@@ -4,9 +4,12 @@ body {
   font-size: 14pt;
   text-align: center;
   font-family: 'Della Respira', Times, serif;
+
+  /* background: #fff;
+  background: radial-gradient(circle, rgba(227,227,227,1) 0%, rgba(255,255,255,1) 50%); */
 }
 
-div.container {
+.container {
   padding: 2em;
   max-width: calc(1024px - 4em);
   margin: 0 auto;
@@ -19,7 +22,7 @@ h1, h2, h3 { padding: 1em 0; }
 h1 small, h2 small, h3 small { margin-top: 0.2em; display: block; font-size: 0.6em; }
 p { margin-bottom: 0.3em; }
 
-a { color: #000; font-weight: bold; }
+a { color: inherit; font-weight: bold; }
 a:hover { text-decoration: none; }
 
 header {
@@ -28,6 +31,7 @@ header {
   padding-bottom: 8vh;
   padding-bottom: 3em;
   background: #000;
+  background: linear-gradient(180deg, rgba(40,40,40,1) 0%, rgba(0,0,0,1) 60%);
   color: #fff;
   position: relative;
   overflow: hidden;
