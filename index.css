@@ -31,7 +31,7 @@ header {
   padding-bottom: 8vh;
   padding-bottom: 3em;
   background: #000;
-  background: linear-gradient(180deg, rgba(40,40,40,1) 0%, rgba(0,0,0,1) 60%);
+  background: linear-gradient(180deg, rgba(30,30,30,1) 0%, rgba(0,0,0,1) 60%);
   color: #fff;
   position: relative;
   overflow: hidden;
@@ -49,7 +49,7 @@ header div.social {
   left: 8em;
   right: 0;
 }
-header a.social { border: 1px solid transparent; display: inline-block; width: 1em; height: 1em; margin: 0.2em; padding: 0.5em; border-radius: 100%; vertical-align: middle; }
+header a.social { border: 1px solid rgba(255, 255, 255, 0.5); display: inline-block; width: 1em; height: 1em; margin: 0.2em; padding: 0.5em; border-radius: 100%; vertical-align: middle; }
 header a.social:hover { background: #fff !important; }
 
 header a.social.twitter { background: #1DA1F2; }
