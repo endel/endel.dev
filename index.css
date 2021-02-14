@@ -1,4 +1,7 @@
-* { margin: 0; padding: 0; }
+* {
+  margin: 0;
+  padding: 0;
+}
 
 body {
   font-size: 14pt;
@@ -111,6 +114,24 @@ hr {
   border: none;
   border-top: 1px solid rgba(29, 29, 29, 0.2);
   margin: 3em 0;
+}
+
+form { 
+  text-align: left;
+}
+form label {
+  display: block; 
+  margin: 0 auto;
+  font-size: 1em;
+  margin-bottom: 1em;
+}
+form textarea, form input, form button {
+  display: block;
+  padding: 1em;
+  width: 100%;
+  font-family: inherit;
+  font-size: 1.2em;
+  box-sizing: border-box; 
 }
 
 #about {
