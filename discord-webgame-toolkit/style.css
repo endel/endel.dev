@@ -178,3 +178,39 @@ footer {
 footer .content {
     /* padding: 6vh 0; */
 }
+
+div.social {
+    /* bottom: 5vh; */
+    width: 100%;
+    margin-top: 1em;
+}
+
+a.social {
+    box-sizing: content-box;
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    margin: 0.2em;
+    padding: 0.5em;
+    border-radius: 100%; 
+}
+a.social:hover { background: #fff !important; }
+
+a.social.twitter { background: #181717; }
+a.social.twitter:hover { border-color: #181717; }
+a.social.twitter:hover svg { color: #181717; }
+
+a.social.github { background: #181717; }
+a.social.github:hover { border-color: #181717; }
+a.social.github:hover svg { color: #181717; }
+
+a.social.medium { background: #12100E; }
+a.social.medium:hover { border-color: #12100E; }
+a.social.medium:hover svg { color: #12100E; }
+
+a.social svg {
+  position: relative;
+  top: 0.1em;
+  width: 90%;
+  color: #fff;
+}
