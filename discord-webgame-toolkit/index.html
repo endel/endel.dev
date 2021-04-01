@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Web Game Toolkit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="content">
+            <h1>Discord Web Game Toolkit</h1>
+            <p>A Node.js application you can customize. <br /> Provides Discord Login, and Discord Bot functionality.</p>
+
+            <img src="screenshot.png" alt="Discord Web Game Toolkit" />
+
+            <p>The source-code provided here is meant to be customized and deployed on your own terms.</p>
+
+            <br />
+            <a href="https://gum.co/discord-web-game-toolkit?wanted=true" class="button">Buy now - $19</a> <a href="https://www.patreon.com/posts/49492199">Patreon supporter? Get it now!</a>
+            <p class="disclaimer"><small>*This project is not affiliated with Discord.</small></p>
+
+        </div>
+    </header>
+
+    <section>
+        <div class="content">
+            <h1>Authentication playground</h1>
+
+            <a href="#" onclick="discordSignIn();return false;">Login</a> |
+            <a href="#" onclick="discordSignOut();return false;">Logout</a> |
+            <a href="#" onclick="getUserData();return false;">Get User From Token</a>
+
+            <pre id="response"></pre>
+
+            <p><a href="https://discord.gg/dqTw2cKrAe">Join the Discord server</a> to test the bot.</p>
+
+            <div class="custom-shape-divider-bottom-1617223032">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <script type="module">
+        import { signIn, signOut, getUserData, token } from "./signin.js";
+
+        // const backendUrl = "http://localhost:3000";
+        const backendUrl = "https://gamestd.io";
+
+        function clearStatus() { document.getElementById('response').innerText = ""; }
+        function addStatus(text) { document.getElementById('response').innerText += text + "\n"; }
+
+        addStatus("Token? " + JSON.stringify(token));
+
+        window.getUserData = function() {
+            clearStatus();
+            addStatus(`Request => ${backendUrl}/auth?token=${token}...`);
+            getUserData(backendUrl)
+                .then((data) => {
+                    addStatus("Response => " + JSON.stringify(data, null, 2))
+                })
+                .catch((err) => {
+                    addStatus("(getUserData) ERROR: " + JSON.stringify(err, null, 2));
+                });
+        };
+
+        window.discordSignIn = function () {
+            clearStatus();
+            addStatus("Login window opened.");
+            signIn(backendUrl).then((response) => {
+                console.log("SUCCESS:", response)
+                addStatus("Response => " + JSON.stringify(response, null, 2));
+
+            }).catch((err) => {
+                addStatus("Error callback. " + JSON.stringify(err, null, 2));
+            });
+        }
+
+        window.discordSignOut = function() {
+            clearStatus();
+            addStatus("Local token cleared.");
+            signOut();
+        };
+    </script>
+
+    <section class="gray">
+        <div class="content">
+            <h1>What can I expect from this?</h1>
+            <p>✓ A simple well-written TypeScript Node.js application</p>
+            <p>✓ Integrates easily with your front-end</p>
+            <p>✓ Contains instructions on how to integrate with Discord</p>
+            <p>✓ A Discord Bot that responds to <code>!profile</code> messages</p>
+            <p>✓ Store user accounts on MongoDB (database can be easily switched)</p>
+        </div>
+
+        <div class="custom-shape-divider-top-1617226099">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+    <section class="faq">
+        <div class="content">
+            <h1>Frequently Asked Questions</h1>
+
+            <p><strong>Isn't $19 a bit much for some sources I could build in a week or two?</strong></p>
+            <p>The question already answers itself, there is around one week of work you can save yourself by purchasing this code, which comes along with quite a few technical decisions.</p>
+
+            <p><strong>What if I don't like it?</strong></p>
+            <p>Oh no! I'll give you a refund, just send me a DM on Discord at endel#2163</p>
+
+            <p><strong>I have another question!</strong></p>
+            <p>No worries, send me a DM on Discord at endel#2163, and I'll get back to you.</p>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="content">
+            <h1>About the author</h1>
+            <img width="200" height="200" src="https://avatars.githubusercontent.com/u/130494?v=4" alt="Endel">
+
+            <p>Endel has 13+ years of experience as a software engineer.</p>
+            <p>He is an expert on web technologies, JavaScript tooling, and multiplayer game development.</p>
+        </div>
+
+    </section>
+
+</body>
+</html>
