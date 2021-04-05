@@ -218,3 +218,40 @@ a.social svg {
   width: 90%;
   color: #fff;
 }
+
+@media only screen and (max-width: 768px) {
+    html, body {
+        width: 100vw; 
+        overflow-x: hidden;
+    }
+
+    header {
+        overflow: auto;
+        width: 100vw;
+        padding-bottom: 3em;
+    }
+
+    header .content > a {
+        display: block;
+    }
+
+    div.content {
+        width: 100vw;
+        padding: 3em 1em;
+    }
+
+    .split {
+        display: block;
+    }
+
+    .split .split-left {
+        text-align: center;
+        width: 100%;
+    }
+
+    .split .split-right {
+        text-align: center;
+        width: 100%;
+    }
+
+}
