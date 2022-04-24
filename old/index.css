@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14pt;
+  text-align: center;
+  font-family: 'Della Respira', Times, serif;
+
+  /* background: #fff;
+  background: radial-gradient(circle, rgba(227,227,227,1) 0%, rgba(255,255,255,1) 50%); */
+}
+
+strong {
+  font-weight: bolder;
+}
+
+main.container {
+  padding: 2em;
+  margin: 0 auto;
+}
+
+main {
+  position: absolute;
+  left: 20vw;
+  width: 80vw;
+}
+
+h1 { font-size: 2em; }
+h2 { font-size: 1.5em; }
+h1, h2, h3 { padding: 1em 0; }
+
+h1 small, h2 small, h3 small { margin-top: 0.2em; display: block; font-size: 0.6em; }
+p { margin-bottom: 0.3em; }
+
+a { color: inherit; font-weight: bold; }
+a:hover { text-decoration: none; }
+
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 20vw;
+  height: 100vh;
+  padding: 2em;
+  padding-top: 8vh;
+  padding-bottom: 8vh;
+  padding-bottom: 3em;
+  background: #000;
+  background: linear-gradient(180deg, rgba(30,30,30,1) 0%, rgba(0,0,0,1) 60%);
+  color: #fff;
+  overflow: hidden;
+}
+header h1 { padding: 0.5em 0; }
+header img {
+  border-radius: 100%;
+  width: 8em;
+  /* border: 2px solid #fff; */
+  box-shadow: 0 0 2px 1px #fff;
+}
+header div.social {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 5vh;
+  width: 100%;
+}
+header a.social { border: 1px solid rgba(255, 255, 255, 0.5); box-sizing: content-box; display: inline-block; width: 1em; height: 1em; margin: 0.2em; padding: 0.5em; border-radius: 100%; }
+header a.social:hover { background: #fff !important; }
+
+header a.social.twitter { background: #181717; }
+header a.social.twitter:hover { border-color: #181717; }
+header a.social.twitter:hover svg { color: #181717; }
+
+header a.social.github { background: #181717; }
+header a.social.github:hover { border-color: #181717; }
+header a.social.github:hover svg { color: #181717; }
+
+header a.social.medium { background: #12100E; }
+header a.social.medium:hover { border-color: #12100E; }
+header a.social.medium:hover svg { color: #12100E; }
+
+header a.social svg {
+  position: relative;
+  top: -0.1em;
+  width: 90%;
+  color: #fff;
+}
+.header-shape-divider-bottom { position: absolute; bottom: 0; left: 0; width: 100%; overflow: hidden; line-height: 0; transform: rotate(90deg); }
+.header-shape-divider-bottom svg { position: relative; display: block; width: calc(227% + 1.3px); height: 70px; transform: rotateY(180deg); }
+.header-shape-divider-bottom .shape-fill { fill: #FFFFFF; }
+
+nav {
+  margin-bottom: 1.5em;
+  line-height: 1.5em;
+}
+
+ul {
+  margin-left: 1em;
+  list-style: none;
+}
+
+.projects > div { display: flex; text-align: left; margin-bottom: 3em; }
+.projects > div:nth-child(even) { flex-direction: row-reverse;}
+.projects > div p { margin: 1em; }
+.projects a img { width: 40vw; border-radius: 1.5em; }
+
+section {
+  border-bottom: 2px solid rgba(29, 29, 29, 1);
+  margin-bottom: 2em;
+  padding-bottom: 3em;
+}
+
+footer {
+  position: relative;
+  padding: 5em 3em 3em 3em;
+  margin-top: 3em;
+  overflow: hidden;
+}
+
+.footer-shape-divider-top { position: absolute; top: 0; left: 0; width: 100%; overflow: hidden; line-height: 0; }
+.footer-shape-divider-top svg { position: relative; display: block; width: calc(227% + 1.3px); height: 40px; transform: rotateY(180deg); }
+.footer-shape-divider-top .shape-fill { fill: #fff; }
+
+hr {
+  border: none;
+  border-top: 1px solid rgba(29, 29, 29, 0.2);
+  margin: 3em 0;
+}
+
+form { 
+  text-align: left;
+}
+form label {
+  display: block; 
+  margin: 0 auto;
+  font-size: 1em;
+  margin-bottom: 1em;
+}
+form textarea, form input, form button {
+  display: block;
+  padding: 1em;
+  width: 100%;
+  font-family: inherit;
+  font-size: 1.2em;
+  box-sizing: border-box; 
+  background: #12100E;
+  border-color: #181717;
+  border-radius: 0.3em;
+  color: #fff;
+  transition: opacity 0.2s;
+  outline: none;
+}
+form textarea:hover, form input:hover, form button:hover {
+  opacity: 0.9;
+}
+form button {
+  cursor: pointer;
+}
+
+#about {
+  font-size: 1.3em;
+  line-height: 1.8em;
+}
+
+@media only screen and (max-width: 1024px) {
+  header {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 100%;
+    height: auto;
+    padding-bottom: 6em;
+  }
+
+  main {
+    position: relative;
+    left: 0;
+    width: 0;
+    width: auto;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .projects > div { flex-direction: column !important; }
+  .projects a img {
+    width: 100% !important;
+  }
+}
