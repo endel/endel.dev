@@ -14,7 +14,7 @@
   --green: #2AA194;
   --pink: #EB6686;
 
-  --margin: 8em;
+  --margin: 4em;
 }
 
 :root {
@@ -31,7 +31,7 @@
   bottom: 0;
   width: calc(100vw - var(--margin));
   height: calc(100vh - var(--margin));
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   /* background: #fff; */
   padding: 4em;
   border-radius: 1em;
@@ -57,9 +57,14 @@ body {
   min-width: 100%;
   min-height: 100%;
   z-index: -1;
+  opacity: 0;
+  transition: opacity 5s;
   /* filter: blur(0.5em); */
   /* animation: grayscale 5s infinite; */
 }
+
+#video-background.fade { opacity: 1; }
+
 
 @keyframes grayscale {
 	0% { filter: grayscale(0); }

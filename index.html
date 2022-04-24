@@ -30,6 +30,13 @@
     <source src="glitch.mp4" type="video/mp4">
   </video>
 
+  <script type="text/javascript">
+      var videoTag = document.getElementById("video-background");
+      videoTag.oncanplaythrough = function() {
+        videoTag.classList.add("fade");
+      };
+  </script>
+
   <div id="scanline"></div>
 
   <div class="container">
