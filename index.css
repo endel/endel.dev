@@ -2,7 +2,7 @@
 * {box-sizing: border-box;}
 
 :root {
-  --bg: #222222;
+  --bg: #010101;
   /* --text: #fff; */
   --text: #222;
 
@@ -274,7 +274,8 @@ a b {
     padding-bottom: 4em;
     width: calc(100vw - var(--margin));
     height: calc(100vh - var(--margin));
-    background: transparent;
+    background: transparent !important;
+    animation: none;
     box-shadow: none;
     border: none;
   }
