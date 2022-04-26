@@ -34,11 +34,12 @@
   background: rgba(255, 255, 255, 0.95);
   /* background: #fff; */
   padding: 4em;
-  border-radius: 1em;
+  border-radius: 0.5em;
   overflow-y: scroll;
   border: 1px solid #000;
   box-shadow: 6px 6px #000;
-  animation: shrink 2s forwards ease-out;
+  /* animation: shrink 2s forwards ease-out; */
+  animation: shrink 2s forwards cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 body {
@@ -74,12 +75,16 @@ body {
 
 @keyframes shrink {
 	0% {
-    width: calc(100vw - 1em);
-    height: calc(100vh - 1em);
+    width: calc(100vw);
+    height: calc(100vh);
+    max-width: 100%;
+    background: rgba(255, 255, 255, 0.1);
   }
 	100% {
     width: calc(100vw - var(--margin));
     height: calc(100vh - var(--margin));
+    max-width: 1024px;
+    background: rgba(255, 255, 255, 0.95);
   }
 }
 
@@ -231,8 +236,8 @@ a b {
 }
 
 #wrapper {
-  max-width: 70vw;
   z-index: 1;
+  max-width: 828px;
   margin: 0 auto;
 }
 
