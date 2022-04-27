@@ -37,12 +37,12 @@
         videoTag.classList.add("fade");
       };
 
-      // fixes autoplay on ios
-      var autoPlayVideo = function() {
-        videoTag.play();
-        document.body.removeEventListener("touchstart", autoPlayVideo);
-      };
-      document.body.addEventListener("touchstart", autoPlayVideo);
+      // // fixes autoplay on ios
+      // var autoPlayVideo = function() {
+      //   videoTag.play();
+      //   document.body.removeEventListener("touchstart", autoPlayVideo);
+      // };
+      // document.body.addEventListener("touchstart", autoPlayVideo);
   </script>
 
   <div id="scanline"></div>
