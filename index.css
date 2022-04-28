@@ -59,7 +59,7 @@ body {
   min-height: 100%;
   z-index: -1;
   opacity: 0;
-  transition: opacity 5s;
+  transition: opacity 3s;
   /* filter: blur(0.5em); */
   /* animation: grayscale 5s infinite; */
 }
